@@ -40,15 +40,10 @@
             padding: 5px;
             border-bottom: 1px solid #ccc;
         }
-        .delete-button {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 12px;
+        .element-box {
+            width: 150px;
+            height: 50px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -86,7 +81,6 @@
         document.getElementById('saveButton').addEventListener('click', function() {
             var container = document.getElementById('container');
             console.log(container.innerHTML);
-            // هنا يمكنك إرسال المحتوى إلى السيرفر الخاص بك أو حفظه بأي طريقة تفضلها
         });
     </script>
 </body>
