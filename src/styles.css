@@ -6,15 +6,10 @@ body {
 }
 
 .draggable {
-    width: 150px;
-    height: 50px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    cursor: move;
-    text-align: center;
-    line-height: 30px;
     position: absolute;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.highlighted {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
 }

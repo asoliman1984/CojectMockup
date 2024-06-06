@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.draggable {
+    padding: 0; /* إزالة الـ padding */
+    background-color: transparent; /* إزالة خلفية اللون */
+}
+
+.highlighted {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+}
+
+
