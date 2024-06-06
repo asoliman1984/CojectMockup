@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CojectMockup Demo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../dist/cojectmockup.min.css">
     <style>
         html, body {
@@ -14,10 +15,11 @@
         .container-fluid {
             height: 100%;
         }
-        #sidebar {
+        #sidebar, #elementList {
             background-color: #f8f9fa;
             padding: 20px;
             height: 100%;
+            overflow-y: auto;
         }
         #container {
             height: 100%;
@@ -27,6 +29,27 @@
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .toolbox button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .element-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .delete-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -35,13 +58,23 @@
             <div id="sidebar" class="col-2">
                 <h1 class="h5">CojectMockup Demo</h1>
                 <div class="toolbox mb-3">
-                    <button class="btn btn-primary btn-block mb-2" onclick="CojectMockup.addElement('textbox')">Add Textbox</button>
-                    <button class="btn btn-primary btn-block mb-2" onclick="CojectMockup.addElement('button')">Add Button</button>
-                    <button class="btn btn-primary btn-block mb-2" onclick="CojectMockup.addElement('dropdown')">Add Dropdown</button>
+                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('textbox')">
+                        <i class="fas fa-font fa-lg mr-2"></i> Textbox
+                    </button>
+                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('button')">
+                        <i class="fas fa-square fa-lg mr-2"></i> Button
+                    </button>
+                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('dropdown')">
+                        <i class="fas fa-caret-down fa-lg mr-2"></i> Dropdown
+                    </button>
                 </div>
                 <button id="saveButton" class="btn btn-success btn-block">Save Design</button>
             </div>
-            <div id="container" class="col-10"></div>
+            <div id="container" class="col-8 position-relative"></div>
+            <div id="elementList" class="col-2">
+                <h1 class="h5">Element List</h1>
+                <div id="elements"></div>
+            </div>
         </div>
     </div>
 

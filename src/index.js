@@ -10,16 +10,27 @@
             var element = document.createElement('div');
             element.className = 'draggable';
             element.setAttribute('draggable', 'true');
+            var id = 'element-' + Date.now();
+            element.id = id;
+
+            var deleteButton = document.createElement('button');
+            deleteButton.className = 'delete-button';
+            deleteButton.innerHTML = 'X';
+            deleteButton.onclick = function() {
+                removeElement(id);
+            };
+            element.appendChild(deleteButton);
 
             if (type === 'textbox') {
-                element.innerHTML = '<input type="text" placeholder="Textbox" class="form-control">';
+                element.innerHTML += '<input type="text" placeholder="Textbox" class="form-control">';
             } else if (type === 'button') {
-                element.innerHTML = '<button class="btn btn-secondary">Button</button>';
+                element.innerHTML += '<button class="btn btn-secondary">Button</button>';
             } else if (type === 'dropdown') {
-                element.innerHTML = '<select class="form-control"><option>Option 1</option><option>Option 2</option></select>';
+                element.innerHTML += '<select class="form-control"><option>Option 1</option><option>Option 2</option></select>';
             }
 
             document.getElementById('container').appendChild(element);
+            addElementToList(id, type);  // تأكد من استدعاء هذه الوظيفة هنا
             makeDraggable(element);
         }
 
@@ -53,9 +64,30 @@
                 });
         }
 
+        function addElementToList(id, type) {
+            var elementList = document.getElementById('elements');
+            var item = document.createElement('div');
+            item.className = 'element-item';
+            item.id = 'item-' + id;
+            item.innerHTML = '<span>' + type + '</span>';
+            elementList.appendChild(item);
+        }
+
+        function removeElement(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                element.parentNode.removeChild(element);
+            }
+            var listItem = document.getElementById('item-' + id);
+            if (listItem) {
+                listItem.parentNode.removeChild(listItem);
+            }
+        }
+
         window.CojectMockup = {
             addElement: addElement,
-            makeDraggable: makeDraggable
+            makeDraggable: makeDraggable,
+            removeElement: removeElement
         };
     };
 })();
