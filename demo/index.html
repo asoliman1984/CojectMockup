@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +13,15 @@
         <div class="row h-100">
             <div class="col-md-2 d-flex flex-column align-items-start pt-3">
                 <h3>CojectMockup Demo</h3>
-                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('textbox')"><i class="fas fa-font"></i> Textbox</button>
+                <button id="addElementButton" class="btn btn-light mb-2 w-100"><i class="fas fa-font"></i> Textbox</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('button')"><i class="fas fa-square"></i> Button</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('dropdown')"><i class="fas fa-caret-down"></i> Dropdown</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('checkbox')"><i class="fas fa-check-square"></i> Checkbox</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('toggle')"><i class="fas fa-toggle-on"></i> Toggle Switch</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('label')"><i class="fas fa-tag"></i> Label</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('grid')"><i class="fas fa-th"></i> Grid</button>
                 <button class="btn btn-success mt-2 w-100" onclick="saveDesign()">Save Design</button>
+                <button class="btn btn-primary mt-2 w-100" onclick="CojectMockup.exportAsImage()"><i class="fas fa-download"></i> Export as Image</button>
             </div>
             <div class="col-md-8">
                 <div id="container" class="border h-100"></div>
@@ -40,7 +41,25 @@
                         <div id="elementsList"></div>
                     </div>
                     <div class="tab-pane fade" id="properties" role="tabpanel" aria-labelledby="properties-tab">
-                        <!-- Content for Properties tab -->
+                        <div id="propertiesList">
+                            <div class="form-group">
+                                <label for="elementX">X</label>
+                                <input type="number" class="form-control" id="elementX">
+                            </div>
+                            <div class="form-group">
+                                <label for="elementY">Y</label>
+                                <input type="number" class="form-control" id="elementY">
+                            </div>
+                            <div class="form-group">
+                                <label for="elementWidth">Width</label>
+                                <input type="number" class="form-control" id="elementWidth">
+                            </div>
+                            <div class="form-group">
+                                <label for="elementHeight">Height</label>
+                                <input type="number" class="form-control" id="elementHeight">
+                            </div>
+                            <div id="customProperties"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,6 +68,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="../src/index.js"></script>
+    <script type="module" src="../src/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 (function() {
     var script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js";
@@ -46,6 +45,10 @@
                     highlightElement(id);
                 };
 
+                element.ondblclick = function() {
+                    showProperties(id);
+                };
+
                 document.getElementById('container').appendChild(element);
                 elementsArray.push({ id: id, type: type, element: element, x: initialX, y: initialY });
                 console.log("Element added:", { id: id, type: type, x: initialX, y: initialY });
@@ -76,6 +79,8 @@
                                     elementData.x = x;
                                     elementData.y = y;
                                 }
+
+                                updateProperties(elementId);
                             }
                         }
                     })
@@ -151,6 +156,8 @@
                                         elementData.y = y;
                                     }
                                 }
+
+                                updateProperties(target.id);
                             }
                         }
                     });
@@ -163,7 +170,7 @@
                     var listItem = document.createElement('div');
                     listItem.className = 'element-list-item';
                     listItem.id = 'item-' + item.id;
-                    listItem.innerHTML = '<span onclick="CojectMockup.highlightElement(' + item.id + ')">' + item.type + '</span> <button class="btn btn-danger btn-sm ml-2 delete-button" onclick="CojectMockup.removeElement(' + item.id + ')">Delete</button>';
+                    listItem.innerHTML = '<span onclick="CojectMockup.highlightElement(\'' + item.id + '\')">' + item.type + '</span> <button class="btn btn-danger btn-sm ml-2 delete-button" onclick="CojectMockup.removeElement(\'' + item.id + '\')">Delete</button>';
                     elementList.appendChild(listItem);
                     console.log("Element listed:", { id: item.id, type: item.type });
                 });
@@ -185,6 +192,34 @@
                 });
             }
 
+            function showProperties(id) {
+                var item = elementsArray.find(item => item.id === id);
+                if (item) {
+                    document.getElementById('elementX').value = item.x;
+                    document.getElementById('elementY').value = item.y;
+                    document.getElementById('elementWidth').value = item.element.style.width.replace('px', '');
+                    document.getElementById('elementHeight').value = item.element.style.height.replace('px', '');
+                    document.querySelector('#myTab a[href="#properties"]').click();
+                }
+            }
+
+            function updateProperties(id) {
+                var item = elementsArray.find(item => item.id === id);
+                if (item) {
+                    var elementX = document.getElementById('elementX');
+                    var elementY = document.getElementById('elementY');
+                    var elementWidth = document.getElementById('elementWidth');
+                    var elementHeight = document.getElementById('elementHeight');
+
+                    if (elementX && elementY && elementWidth && elementHeight) {
+                        elementX.value = item.x;
+                        elementY.value = item.y;
+                        elementWidth.value = item.element.style.width.replace('px', '');
+                        elementHeight.value = item.element.style.height.replace('px', '');
+                    }
+                }
+            }
+
             function removeElement(id) {
                 var item = elementsArray.find(item => item.id === id);
                 if (item && item.element) {
@@ -202,7 +237,20 @@
                 addElement: addElement,
                 makeDraggableResizable: makeDraggableResizable,
                 removeElement: removeElement,
-                highlightElement: highlightElement
+                highlightElement: highlightElement,
+                exportAsImage: function() {
+                    var container = document.getElementById('container');
+                    domtoimage.toPng(container)
+                        .then(function(dataUrl) {
+                            var link = document.createElement('a');
+                            link.href = dataUrl;
+                            link.download = 'mockup.png';
+                            link.click();
+                        })
+                        .catch(function(error) {
+                            console.error('oops, something went wrong!', error);
+                        });
+                }
             };
         }
     };
