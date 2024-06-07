@@ -4,84 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CojectMockup Demo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../dist/cojectmockup.min.css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        .container-fluid {
-            height: 100%;
-        }
-        #sidebar, #elementList {
-            background-color: #f8f9fa;
-            padding: 20px;
-            height: 100%;
-            overflow-y: auto;
-        }
-        #container {
-            height: 100%;
-            border: 2px dashed #ccc;
-            background-color: #fff;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .toolbox button {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .element-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px;
-            border-bottom: 1px solid #ccc;
-        }
-        .element-box {
-            width: 150px;
-            height: 50px;
-            margin: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid h-100">
         <div class="row h-100">
-            <div id="sidebar" class="col-2">
-                <h1 class="h5">CojectMockup Demo</h1>
-                <div class="toolbox mb-3">
-                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('textbox')">
-                        <i class="fas fa-font fa-lg mr-2"></i> Textbox
-                    </button>
-                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('button')">
-                        <i class="fas fa-square fa-lg mr-2"></i> Button
-                    </button>
-                    <button class="btn btn-light d-flex align-items-center" onclick="CojectMockup.addElement('dropdown')">
-                        <i class="fas fa-caret-down fa-lg mr-2"></i> Dropdown
-                    </button>
-                </div>
-                <button id="saveButton" class="btn btn-success btn-block">Save Design</button>
+            <div class="col-md-2 d-flex flex-column align-items-start pt-3">
+                <h3>CojectMockup Demo</h3>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('textbox')"><i class="fas fa-font"></i> Textbox</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('button')"><i class="fas fa-square"></i> Button</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('dropdown')"><i class="fas fa-caret-down"></i> Dropdown</button>
+                <button class="btn btn-success mt-2 w-100" onclick="saveDesign()">Save Design</button>
             </div>
-            <div id="container" class="col-8 position-relative"></div>
-            <div id="elementList" class="col-2">
-                <h1 class="h5">Element List</h1>
-                <div id="elements"></div>
+            <div class="col-md-8">
+                <div id="container" class="border h-100"></div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <h3>Panel</h3>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="elements-tab" data-toggle="tab" href="#elements" role="tab" aria-controls="elements" aria-selected="true">Element List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="properties-tab" data-toggle="tab" href="#properties" role="tab" aria-controls="properties" aria-selected="false">Properties</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="elements" role="tabpanel" aria-labelledby="elements-tab">
+                        <div id="elementsList"></div>
+                    </div>
+                    <div class="tab-pane fade" id="properties" role="tabpanel" aria-labelledby="properties-tab">
+                        <!-- Content for Properties tab -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../src/index.js"></script>
     <script src="../dist/cojectmockup.min.js"></script>
-    <script>
-        document.getElementById('saveButton').addEventListener('click', function() {
-            var container = document.getElementById('container');
-            console.log(container.innerHTML);
-        });
-    </script>
 </body>
 </html>

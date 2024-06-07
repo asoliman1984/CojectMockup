@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CojectMockup
 =======
 # CojectMockup
@@ -12,4 +11,4 @@ CojectMockup is a drag-and-drop mockup tool using Interact.js.
    <link rel="stylesheet" href="path/to/cojectmockup.min.css">
    <script src="path/to/interact.min.js"></script>
    <script src="path/to/cojectmockup.min.js"></script>
->>>>>>> 3f618e2 (Initial commit)
+
