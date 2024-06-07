@@ -22,7 +22,7 @@ body, html {
 
 .resizable {
     resize: both;
-    overflow: hidden; /* Hide the scrollbars */
+    overflow: hidden;
 }
 
 .highlighted {
@@ -53,8 +53,17 @@ body, html {
 
 #elementsList .element-item button {
     margin-left: 10px;
-    margin-right: 0; /* Ensures the delete button is at the far right */
+    margin-right: 0;
     padding: 5px 10px;
 }
 
+.element-list-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.delete-button {
+    margin-left: 10px;
+}

@@ -57,3 +57,13 @@ body, html {
     padding: 5px 10px;
 }
 
+.element-list-item {
+    margin-top: 10px; /* يمكنك تعديل هذه القيمة حسب الحاجة */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete-button {
+    margin-left: 10px;
+}

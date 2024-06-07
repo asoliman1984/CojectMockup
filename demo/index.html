@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>CojectMockup Demo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../dist/cojectmockup.min.css">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
     <div class="container-fluid h-100">
@@ -16,6 +17,9 @@
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('textbox')"><i class="fas fa-font"></i> Textbox</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('button')"><i class="fas fa-square"></i> Button</button>
                 <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('dropdown')"><i class="fas fa-caret-down"></i> Dropdown</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('checkbox')"><i class="fas fa-check-square"></i> Checkbox</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('toggle')"><i class="fas fa-toggle-on"></i> Toggle Switch</button>
+                <button class="btn btn-light mb-2 w-100" onclick="CojectMockup.addElement('label')"><i class="fas fa-tag"></i> Label</button>
                 <button class="btn btn-success mt-2 w-100" onclick="saveDesign()">Save Design</button>
             </div>
             <div class="col-md-8">
@@ -46,6 +50,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../src/index.js"></script>
-    <script src="../dist/cojectmockup.min.js"></script>
 </body>
 </html>
