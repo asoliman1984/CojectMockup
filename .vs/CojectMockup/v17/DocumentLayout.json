@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\properties.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\properties.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\dragResize.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\dragResize.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\elements.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\elements.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1d0c61d4-b21b-39b3-8e36-4cb9990c8be0}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2a9bd80d-b9a1-34ad-95da-8607b8b40945}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{191acb7e-105f-38b7-a841-3c0f4ea5ede5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cbfbc67d-54ee-3672-a877-4f5b50f6ef07}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{87493c0f-c4b9-3a09-bb7b-358ab49f624a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{17190a8b-df25-30bf-93e3-9d5ddfe5fef9}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9862388-5562-3d4b-8dbc-8ac794ca61e2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57ee38e6-028e-3d83-ae4d-669d90022d4b}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dragResize.js",
+              "DocumentMoniker": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\dragResize.js",
+              "RelativeDocumentMoniker": "src\\dragResize.js",
+              "ToolTip": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\dragResize.js",
+              "RelativeToolTip": "src\\dragResize.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-08T09:12:11.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "elements.js",
+              "DocumentMoniker": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.js",
+              "RelativeDocumentMoniker": "src\\elements.js",
+              "ToolTip": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.js",
+              "RelativeToolTip": "src\\elements.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-08T09:10:01.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "elements.json",
+              "DocumentMoniker": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.json",
+              "RelativeDocumentMoniker": "src\\elements.json",
+              "ToolTip": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\elements.json",
+              "RelativeToolTip": "src\\elements.json",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-08T09:09:36.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "properties.js",
+              "DocumentMoniker": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\properties.js",
+              "RelativeDocumentMoniker": "src\\properties.js",
+              "ToolTip": "C:\\Users\\Ahmad Soliman\\Desktop\\CojectMockup\\CojectMockup\\src\\properties.js",
+              "RelativeToolTip": "src\\properties.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-08T09:03:03.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

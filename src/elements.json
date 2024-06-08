@@ -38,8 +38,8 @@
     "label": {
         "innerHTML": "<svg width='100' height='30' xmlns='http://www.w3.org/2000/svg'><text x='10' y='20' font-size='16' fill='black' alignment-baseline='middle'>Label</text></svg>",
         "style": {
-            "width": "100px",
-            "height": "30px"
+            "width": "150px",
+            "height": "50px"
         }
     },
     "grid": {
